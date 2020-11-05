@@ -1,0 +1,21 @@
+int firstUniqChar(char * s)
+{
+    int i = -1;
+    int j;
+    int flag;
+
+    while(s[++i])
+    {
+        j = -1;
+        flag = 0;
+        while(s[++j])
+            if (s[i] == s[j] && i != j)
+            {
+                flag = 1;
+                break ;
+            }
+        if (flag == 0)
+            return i;
+    }
+    return -1;
+}
