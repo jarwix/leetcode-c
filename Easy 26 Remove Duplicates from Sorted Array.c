@@ -1,15 +1,11 @@
 int removeDuplicates(int* nums, int numsSize)
 {
-    int last;
     int i;
     int returnNum;
 
     i = 0;
     if (numsSize != 0)
-    {
-        last = nums[0];
         returnNum = 1;
-    }
     else
         returnNum = 0;
     while(++i < numsSize)
